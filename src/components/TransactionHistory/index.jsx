@@ -1,3 +1,5 @@
+import './transaction.css';
+
 const TransactionHistory = ({ items }) => {
   return (
     <table className="transaction-history">
