@@ -1,4 +1,5 @@
-@import-normalize; /* bring in normalize.css styles */
+@import-normalize;
+/* bring in normalize.css styles */
 
 body {
   margin: 0;
@@ -7,9 +8,83 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(to bottom right, #ffccff, #ccffcc);
+  position: relative;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.avatar-stats {
+  text-align: center;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.stats-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #555;
+}
+
+.stats-item {
+  padding: 10px;
+}
+
+.label {
+  color: #999;
+  font-size: 0.8em;
+  display: block;
+  margin-bottom: 3px;
+  border-bottom: 1px solid #555;
+}
+
+.quantity {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+:root {
+  --primary-color-1: #00796b;
+  --primary-color-2: #64ffda;
+  --secondary-color-1: #f06292;
+  --secondary-color-2: #f8bbd0;
+}
+
+@keyframes changeBackground {
+
+  0%,
+  100% {
+    background: linear-gradient(to bottom right, var(--primary-color-1), var(--secondary-color-1));
+  }
+
+  25% {
+    background: linear-gradient(to bottom right, var(--primary-color-2), var(--secondary-color-2));
+  }
+
+  50% {
+    background: linear-gradient(to bottom right, var(--primary-color-1), var(--secondary-color-1));
+  }
+
+  75% {
+    background: linear-gradient(to bottom right, var(--primary-color-2), var(--secondary-color-2));
+  }
 }

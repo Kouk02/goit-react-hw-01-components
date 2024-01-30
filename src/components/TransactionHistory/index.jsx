@@ -1,25 +1,34 @@
-import './transactionHistory.css';
+import {
+  TransactionHistoryTable,
+  TableHeaderCell,
+  TableDataCell,
+  EvenRowDataCell,
+} from './transactionHistory.jsx';
 
 const TransactionHistory = ({ items }) => {
   return (
-    <table className="transaction-history">
+    <TransactionHistoryTable className="transaction-history">
       <thead>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <TableHeaderCell>Type</TableHeaderCell>
+          <TableHeaderCell>Amount</TableHeaderCell>
+          <TableHeaderCell>Currency</TableHeaderCell>
         </tr>
       </thead>
       <tbody>
-        {items.map((transaction) => (
+        {items.map((transaction, index) => (
           <tr key={transaction.id}>
-            <td>{transaction.type}</td>
-            <td>{transaction.amount}</td>
-            <td>{transaction.currency}</td>
+            {index % 2 === 0 ? (
+              <EvenRowDataCell>{transaction.type}</EvenRowDataCell>
+            ) : (
+              <TableDataCell>{transaction.type}</TableDataCell>
+            )}
+            <TableDataCell>{transaction.amount}</TableDataCell>
+            <TableDataCell>{transaction.currency}</TableDataCell>
           </tr>
         ))}
       </tbody>
-    </table>
+    </TransactionHistoryTable>
   );
 };
 
