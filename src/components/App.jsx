@@ -1,18 +1,18 @@
 // -- task 1 --
-import Profile from './Profile/index.jsx';
-import user from './Profile/user.json';
+import Profile from './Profile';
+import user from '../data/user.json';
 
 // -- task 2 --
-import Statistics from './Statistics/index.jsx'; 
-import statisticsData from './Statistics/data.json';
+import Statistics from './Statistics'; 
+import statisticsData from '../data/data.json';
 
 // -- task 3 --
-import FriendList from './FriendList/index.jsx'; 
-import friendsData from './FriendList/friends.json';
+import FriendList from './FriendList';
+import friendsData from '../data/friends.json';
 
 // -- task 4 --
-import TransactionHistory from './TransactionHistory/index.jsx';
-import transactions from './TransactionHistory/transactions.json';
+import TransactionHistory from './TransactionHistory';
+import transactions from '../data/transactions.json';
 
 
 const App = () => {

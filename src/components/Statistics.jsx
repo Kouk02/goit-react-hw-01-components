@@ -6,7 +6,7 @@ import {
   StatItem,
   StatLabel,
   StatPercentage,
-} from './statistics.jsx';
+} from '../styledComponents/Statistics.styled';
 
 const Statistics = ({ title, stats }) => {
   return (

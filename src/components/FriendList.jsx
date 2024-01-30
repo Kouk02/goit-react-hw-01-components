@@ -5,7 +5,7 @@ import {
   Status,
   Avatar,
   Name,
-} from './friendsList.jsx';
+} from '../styledComponents/FriendList.styled';
 
 const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
