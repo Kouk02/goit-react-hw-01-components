@@ -3,7 +3,7 @@ import {
   TableHeaderCell,
   TableDataCell,
   EvenRowDataCell,
-} from '../styledComponents/TransactionHistory.styled'
+} from './TransactionHistory.styled'
 
 const TransactionHistory = ({ items }) => {
   return (
