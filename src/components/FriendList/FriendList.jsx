@@ -1,27 +1,7 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  FriendListContainer,
-  FriendListItemContainer,
-  Status,
-  Avatar,
-  Name,
-} from './FriendList.styled';
-
-const FriendListItem = ({ avatar, name, isOnline }) => {
-  return (
-    <FriendListItemContainer>
-      <Status isOnline={isOnline} />
-      <Avatar src={avatar} alt="User avatar" />
-      <Name>{name}</Name>
-    </FriendListItemContainer>
-  );
-};
-
-FriendListItem.propTypes = {
-  avatar: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  isOnline: PropTypes.bool.isRequired,
-};
+import FriendListItem from '../FriendListItem/FriendListItem';
+import { FriendListContainer } from './FriendList.styled';
 
 const FriendsList = ({ friends }) => {
   return (
